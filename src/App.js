@@ -1,11 +1,7 @@
-import './estilos.css';
+import './style.css';
 
 function App() {
-  let imagen = " ";
-  let titulo = " ";
-  let descripcion = " ";
-  let nombre = " ";
-  let precio = " ";
+
 
 
   return (
