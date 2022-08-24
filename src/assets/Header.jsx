@@ -1,6 +1,7 @@
 import React from "react";
-import imagenes from "./imagenes";
 import './css/estilos.css';
+import imagenes from "./imagenes";
+
 
 const Header = () => {
     return (

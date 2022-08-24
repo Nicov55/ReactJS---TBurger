@@ -1,4 +1,5 @@
 import React from "react";
+import './css/estilos.css';
 import imagenes from "./imagenes";
 
 const Footer = () => {
