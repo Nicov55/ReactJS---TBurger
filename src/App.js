@@ -1,5 +1,5 @@
 import './assets/css/estilos.css';
-import Nav from './assets/Nav';
+import NavBar from './assets/NavBar';
 import Header from './assets/Header';
 import Main from './assets/Main';
 import Footer from './assets/Footer';
@@ -28,9 +28,10 @@ productos.push(new Producto(0, "CHEESE BURGER", 900, imagenes.cheeseburger, "Ham
 // productos.push(new Producto(4, "ONION BURGER", 1100, imagenes.onionburger.jpg, "Hamburguesa en pan de papa, con doble carne de 120gr smasheada con cebolla a la plancha y 4 fetas de queso cheddar con papas fritas"));
 // productos.push(new Producto(5, "VEGGIE", 1000, imagenes.veggieburger.jpg, "Hamburguesa en pan de papa, medallon de lentejas, rucula, parmesano, tomate y salsa de albahaca con papas fritas"));
 
+
   return (
     <div className="container-fluid">
-      <Nav />
+      <NavBar />
       <hr />
       <Header />
       <hr />

@@ -1,9 +1,10 @@
 import React from "react";
 import imagenes from "./imagenes";
+import './css/estilos.css';
 
 const Header = () => {
     return (
-        <div className="bg-dark py-3">
+        <div className="bg-dark py-3 fondoheader">
        <div className="container px-2 px-lg-2 my-2">
             <div className="text-center text-white">
               &nbsp;
