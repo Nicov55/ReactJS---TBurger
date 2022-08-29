@@ -6,6 +6,7 @@ const Productos = (props) => {
         id,
         nombre,
         precio,
+        imagen,
         descripcion,
         adicionales
 

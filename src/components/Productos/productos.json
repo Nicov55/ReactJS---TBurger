@@ -3,7 +3,7 @@
     "id": 0,
     "nombre": "CHEESE BURGER",
     "precio":  900,
-    "imagen": "./imagenes/cheeseburger.jpg",
+    "imagen": "https://i.ibb.co/k4cnwg5/cheeseburger.jpg",
     "descripcion": "Hamburguesa en pan de queso, con dos medallones de 120 gr y 4 fetas de queso cheddar con papas fritas",
     "adicionales": []  
 },
@@ -12,7 +12,7 @@
     "id": 1,
     "nombre": "BACON BURGER",
     "precio":  1000,
-    "imagen": "./imagenes/cheesebaconburger.jpg",
+    "imagen": "https://i.ibb.co/wSgRbLD/cheesebaconburger.jpg",
     "descripcion": "Hamburguesa en pan de papa, con dos medallones de 120 gr, 4 fetas de queso cheddar, doble panceta ahumada y salsa BK con papas fritas",
     "adicionales": []     
 },
@@ -21,7 +21,7 @@
     "id": 2,
     "nombre": "CRISPY BURGER",
     "precio":  1100,
-    "imagen": "./imagenes/crispyburger.jpg",
+    "imagen": "https://i.ibb.co/BLdw9kP/crispyburger.jpg",
     "descripcion": "Hamburguesa en pan de papa, con dos medallones de 120gr, 4 fetas de queso cheddar, doble panceta ahumada, cebolla crispy y salsa thousand island con papas fritas",
     "adicionales": []    
 },
@@ -30,7 +30,7 @@
     "id": 3,
     "nombre": "AMERICAN BURGER",
     "precio":  1100,
-    "imagen": "./imagenes/americanburger.jpg",
+    "imagen": "https://i.ibb.co/VD009w7/americanburger.jpg",
     "descripcion": "Hamburguesa en pan de papa, con dos medallones de 120gr, 4 fetas de queso cheddar , lechuga, tomate, pepino, cebolla y salsa BM con papas fritas",
     "adicionales": []    
 },
@@ -39,7 +39,7 @@
     "id": 4,
     "nombre": "ONION BURGER",
     "precio":  1100,
-    "imagen": "./imagenes/onionburger.jpg",
+    "imagen": "https://i.ibb.co/yspdxS9/onionburger.jpg",
     "descripcion": "Hamburguesa en pan de papa, con doble carne de 120gr smasheada con cebolla a la plancha y 4 fetas de queso cheddar con papas fritas",
     "adicionales": []    
 },
@@ -48,7 +48,7 @@
     "id": 5,
     "nombre": "VEGGIE BURGER",
     "precio":  1000,
-    "imagen": "./imagenes/veggieburger.jpg",
+    "imagen": "https://i.ibb.co/d56nj5y/veggieburger.jpg",
     "descripcion": "Hamburguesa en pan de papa, medallon de lentejas, rucula, parmesano, tomate y salsa de albahaca con papas fritas",
     "adicionales": []    
 }
