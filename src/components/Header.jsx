@@ -1,6 +1,6 @@
 import React from "react";
-import './css/estilos.css';
-import imagenes from "./imagenes";
+import '../assets/css/style.css';
+import images from "../assets/images";
 
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
             <div className="text-center text-white">
               &nbsp;
                 <h1 className="display-5 fw-bolder titulo">T-BURGER</h1>
-                <p><img className="tigerimage" alt="Cambiar imagen" height="130" src={imagenes.logoburger} /></p>
+                <p><img className="tigerimage" alt="Cambiar imagen" height="130" src={images.logoburger} /></p>
               
             </div>
         </div>

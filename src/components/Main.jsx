@@ -1,11 +1,8 @@
 import React from "react";
-import './css/estilos.css';
-import imagenes from "./imagenes";
+import '../assets/css/style.css';
+// import images from "../assets/images";
 
 const Main = () => {
-
-    const productos = []
-
     return (
         // TEMPLATE MAIN
         <div className="py-5">
