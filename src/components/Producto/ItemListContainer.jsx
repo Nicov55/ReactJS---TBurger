@@ -1,6 +1,12 @@
 import React from 'react';
+import ItemCount from '../Botones/ItemCount';
 
 const ItemListContainer = (greetings) => {
+
+  const onAdd = (cantidad) => {
+    console.log(`Compraste ${cantidad} unidades de ${greetings.nombre}`);
+  }
+
   return (
 
 <div className="col mb-5">
@@ -27,14 +33,11 @@ const ItemListContainer = (greetings) => {
                         <summary>Ingredientes</summary>  
                             <p className="descripcion" id="descripcion-0">{greetings.descripcion}</p>
                     </details>
-                   
                     </div>
                     </div>
     
     {/* ACCIONES  */}
-                    <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div className="text-center"><button id="0" class="botonagregar btn btn-outline-dark mt-auto">Agregar al Pedido</button></div>
-                        </div>
+                      <ItemCount inicial={1} stock={8} onAdd= {onAdd} />
                     </div>
                   </div>
   )

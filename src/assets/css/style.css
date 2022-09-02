@@ -15,3 +15,15 @@
 .botoncart {
     align-items: center;
 }
+
+.counter {
+    width: fit-content;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.count {
+    padding-left: 10px;
+    padding-right: 10px;
+}
