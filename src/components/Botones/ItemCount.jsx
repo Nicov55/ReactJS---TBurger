@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-const ItemCount = ({inicial, stock, onAdd}) => {
+const ItemCount = ({initial, stock, onAdd}) => {
 
-const [count,setCount] = useState(parseInt(inicial));
+const [count,setCount] = useState(parseInt(initial));
 
 const decremento = () => {
     setCount(count - 1);
@@ -13,8 +13,8 @@ const aumento = () => {
 }
 
 useEffect (() => {
-    setCount(parseInt(inicial));
-}, [inicial])
+    setCount(parseInt(initial));
+}, [initial])
 
   return (
     <div className='counter card-footer p-4 pt-0 border-top-0 bg-transparent'>
