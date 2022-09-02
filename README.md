@@ -1,4 +1,4 @@
-# Proyecto ReactJS Coderhouse - Nicolás Verón
+# Proyecto ReactJS T-Burger - Nicolás Verón
 
 Este es un repositorio de ReactJS relativo a un e-commerce de hamburguesas.
 
