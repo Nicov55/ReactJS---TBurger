@@ -1,46 +1,31 @@
-import React from 'react';
-import ItemCount from '../Botones/ItemCount';
+import React from "react";
+import Productos from "./productos.json";
+import ItemList from "./ItemList";
 
-const ItemListContainer = (props) => {
 
-  const onAdd = (cantidad) => {
-    console.log(`Compraste ${cantidad} unidades de ${props.nombre}`);
-  }
-
-  return (
-
-<div className="col mb-5">
-  <div className="card h-100" key={props.id}>
+const ItemListContainer = () => {
     
-    {/* IMAGEN */}
-
-      <img className="card-img-top imgburger" id="imgburger-0" src={props.imagen} alt="..." />
-
-          <div className="card-body p-4">
-              <div className="text-center">
-
-    {/* NOMBRE DEL PRODUCTO */}
-
-              <h5 className="nombreburger fw-bolder" >{props.nombre}</h5>
-
-    {/* PRECIO */}
-                    <p className="precio" id="precio-0">$ {props.precio}</p>
-
-
-    {/* ABRO DETALLES */}
-                    
-                    <details>
-                        <summary>Ingredientes</summary>  
-                            <p className="descripcion" id="descripcion-0">{props.descripcion}</p>
-                    </details>
-                    </div>
-                    </div>
+    const productos = Productos.map(productos => productos)
     
-    {/* ACCIONES  */}
-                      <ItemCount initial={1} stock={8} onAdd= {onAdd} />
-                    </div>
-                  </div>
-  )
+    // PROMESA
+    
+    return (
+        <div className="py-5">
+            <div className="container px-4 px-lg-5 mt-5">
+                <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-3 justify-content-center">   
+                {productos.map((producto) =>{
+                return <ItemList 
+                key={producto.id} 
+                imagen= {producto.imagen} 
+                nombre={producto.nombre} 
+                precio={producto.precio} 
+                descripcion={producto.descripcion} 
+                />
+            })}
+                 </div>
+            </div>
+        </div>
+    )
 }
 
-export default ItemListContainer
+export default ItemListContainer; 

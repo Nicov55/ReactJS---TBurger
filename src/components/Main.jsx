@@ -1,10 +1,10 @@
 import React from 'react'
-import Producto from './Producto/Producto'
+import ItemListContainer from './Producto/ItemListContainer'
 
 const Main = () => {
   return (
     <div>
-    <Producto />   
+    <ItemListContainer />   
     </div>
   )
 }
