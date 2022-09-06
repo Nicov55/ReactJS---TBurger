@@ -1,30 +1,35 @@
 import React from "react";
-import Productos from "./productos.json";
+import Productos from './productos.json'
 import ItemList from "./ItemList";
+import { useState } from "react";
+import { useEffect } from "react";
 
 
-const ItemListContainer = () => {
-    
+const ItemListContainer = (props) => {
+
     const productos = Productos.map(productos => productos)
-    
-    // PROMESA
+
+    const [data,setData] = useState ([])
+
+    useEffect(() => {
+        const getData = new Promise (resolve => {
+            setTimeout(() => {
+                resolve(productos)
+            }, 2000)
+        });
+        getData.then(res => setData(res))
+
+
+    })
     
     return (
-        <div className="py-5">
-            <div className="container px-4 px-lg-5 mt-5">
-                <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-3 justify-content-center">   
-                {productos.map((producto) =>{
-                return <ItemList 
-                key={producto.id} 
-                imagen= {producto.imagen} 
-                nombre={producto.nombre} 
-                precio={producto.precio} 
-                descripcion={producto.descripcion} 
-                />
-            })}
-                 </div>
-            </div>
+        
+        <div>
+
+                  <ItemList data={data} />
+
         </div>
+
     )
 }
 
