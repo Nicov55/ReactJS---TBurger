@@ -1,4 +1,5 @@
 import React from "react";
+import '../../assets/css/style.css'
 import Productos from './productos.json'
 import ItemList from "./ItemList";
 import { useState } from "react";

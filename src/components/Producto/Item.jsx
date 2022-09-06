@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../assets/css/style.css'
 import ItemCount from '../Botones/ItemCount';
 
 const Item = (item) => {
@@ -13,7 +14,7 @@ const Item = (item) => {
     
     {/* IMAGEN */}
 
-      <img className="card-img-top imgburger" id="imgburger-0" src={item.imagen} alt="..." />
+      <img className="card-img-top imgburger" id="imgburger-0" src={item.imagen} alt={item.nombre} />
 
           <div className="card-body p-4">
               <div className="text-center">

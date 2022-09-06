@@ -5,7 +5,7 @@ import images from "../assets/images";
 
 const Header = () => {
     return (
-        <div className="bg-dark py-3 fondoheader">
+    <div className="bg-dark py-4 fondoheader">
        <div className="container px-2 px-lg-2 my-2">
             <div className="text-center text-white">
               &nbsp;
@@ -14,7 +14,7 @@ const Header = () => {
               
             </div>
         </div>
-        </div>      
+    </div>      
     )
 }
 

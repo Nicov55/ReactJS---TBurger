@@ -5,6 +5,7 @@ import onionburger from './images/onionburger.jpg';
 import veggieburger from './images/veggieburger.jpg';
 import logoburger from './images/burgermain.png';
 import logocart from    './images/cartico.png';
+import bannermodelo from './images/bannermodelo.jpg'
 
 const images = {
     'cheeseburger': cheeseburger,
@@ -14,6 +15,8 @@ const images = {
     'veggieburger': veggieburger,
     'logoburger': logoburger,
     'logocart': logocart,
+    'bannermodelo': bannermodelo,
+
 }
 
 export default images
