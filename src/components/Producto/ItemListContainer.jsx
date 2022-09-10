@@ -26,9 +26,7 @@ const ItemListContainer = (props) => {
     return (
         
         <div>
-
                   <ItemList data={data} />
-
         </div>
 
     )
