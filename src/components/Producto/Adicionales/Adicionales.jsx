@@ -6,9 +6,9 @@ const Adicionales = () => {
     <details>
     <summary>Adicionales</summary>
     {
-    adicionalesBase.map(Adicional => {
+    adicionalesBase.map(adicional => {
         return (
-            <div className="form-check extras" id="extras" key={Adicional.id}> {Adicional.nombre} = ${Adicional.precio}
+            <div className="form-check extras" id="extras" key={adicional.id}> {adicional.nombre} = ${adicional.precio}
             <input className="form-check-input" type="checkbox" value="" id="adicional"/>
             </div>
         )
