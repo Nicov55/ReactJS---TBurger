@@ -12,15 +12,20 @@ const ItemDetailContainer = () => {
   const [item,setItem] = useState ([])
 
   useEffect(() => {
+
       const getItem = new Promise (resolve => {
+        const producto = productos.find((prod) => prod.id === 1)
           setTimeout(() => {
-              resolve(productos[1])
+              resolve(producto)
           }, 2000)
       });
       getItem.then(res => setItem(res))
+      .catch((error) => {
+        console.log("Ocurrio un error, intente nuevamente");
+      });
 
 
-  })
+  },[])
 
   return (
     <div>

@@ -19,9 +19,11 @@ const ItemListContainer = (props) => {
             }, 2000)
         });
         getData.then(res => setData(res))
+        .catch((error) => {
+            console.log("Ocurrio un error, intente nuevamente");
+          });
 
-
-    })
+    },[])
     
     return (
         
