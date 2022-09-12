@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
       });
       getItem.then(res => setItem(res))
       .catch((error) => {
-        console.log("Ocurrio un error, intente nuevamente");
+        console.log(error = "Ocurrio un error, intente nuevamente");
       });
 
 
