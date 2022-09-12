@@ -1,22 +1,33 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './assets/css/style.css';
 import NavBar from './components/NavBar';
 import Header from './components/Header';
-import Main from './components/Main';
+import Home from './components/Home';
 import Footer from './components/Footer';
+import Cart from './components/Cart';
+import Nosotros from './components/Nosotros';
+import ItemDetailContainer from './components/Producto/Detalles/ItemDetailContainer';
+
 
 function App() {
 
   return (
-    <div className="container-fluid">
-      <NavBar />
-      <hr />
-      <Header />
-      <hr />
-      <Main />
-      <hr />
-      <Footer />
-      <hr />
-    </div>
+    <BrowserRouter>
+        <NavBar />
+        <hr />
+        <Header />
+        <hr />
+        <Routes>
+          <Route path='/' element={<Home />}> </Route>
+          <Route path='/index' element={<Home />}> </Route>
+          <Route path='/inicio' element={<Home />}> </Route>
+          <Route path='/detail' element={<ItemDetailContainer />}> </Route>
+          <Route path='/nosotros' element={<Nosotros />}> </Route>
+          <Route path='/cart' element={<Cart />}> </Route>
+        </Routes>
+        <Footer />
+        <hr />
+    </BrowserRouter>
   );
 }
 

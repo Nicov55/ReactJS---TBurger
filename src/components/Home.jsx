@@ -2,7 +2,7 @@ import React from 'react'
 import ItemDetailContainer from './Producto/Detalles/ItemDetailContainer'
 import ItemListContainer from './Producto/ItemListContainer'
 
-const Main = () => {
+const Home = () => {
   return (
     <div>
     <ItemListContainer />
@@ -11,4 +11,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Home
