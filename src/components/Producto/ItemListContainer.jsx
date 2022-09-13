@@ -21,14 +21,12 @@ const ItemListContainer = (props) => {
         getData.then(res => setData(res))
         .catch((error) => {
             console.log(error = "Ocurrio un error, intente nuevamente");
-          });
-
+        });
     },[])
     
     return (
-        
         <div>
-                  <ItemList data={data} />
+            <ItemList data={data} />
         </div>
 
     )

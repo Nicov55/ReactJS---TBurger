@@ -4,6 +4,7 @@ import Productos from '../productos.json';
 import ItemDetail from './ItemDetail';
 import { useState } from "react";
 import { useEffect } from "react";
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
 
@@ -11,15 +12,16 @@ const ItemDetailContainer = () => {
 
   const [item,setItem] = useState ([])
 
+  const {detailId} = useParams();
+
   useEffect(() => {
 
       const getItem = new Promise (resolve => {
-        const producto = productos.find((prod) => prod.id === 1)
           setTimeout(() => {
-              resolve(producto)
+              resolve(productos)
           }, 2000)
       });
-      getItem.then(res => setItem(res))
+      getItem.then(res => setItem(res.find(productos => productos.id === parseInt(detailId))))
       .catch((error) => {
         console.log(error = "Ocurrio un error, intente nuevamente");
       });
