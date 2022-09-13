@@ -19,8 +19,7 @@ function App() {
         <hr />
         <Routes>
           <Route path='/' element={<Home />}> </Route>
-          <Route path='/index' element={<Home />}> </Route>
-          <Route path='/inicio' element={<Home />}> </Route>
+          <Route path='/home' element={<Home />}> </Route>
           <Route path='/detail/:detailId' element={<ItemDetailContainer />}> </Route>
           <Route path='/nosotros' element={<Nosotros />}> </Route>
           <Route path='/cart' element={<Cart />}> </Route>

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../assets/css/style.css';
 import ItemCount from '../../Botones/ItemCount';
-import Adicionales from '../Adicionales/Adicionales';
+
 
 const ItemDetail = ({item}) => {
  

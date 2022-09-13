@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
               resolve(productos)
           }, 2000)
       });
-      getItem.then(res => setItem(res.find(productos => productos.id === parseInt(detailId))))
+      getItem.then(res => setItem(res.find(prod => prod.id === parseInt(detailId))))
       .catch((error) => {
         console.log(error = "Ocurrio un error, intente nuevamente");
       });
