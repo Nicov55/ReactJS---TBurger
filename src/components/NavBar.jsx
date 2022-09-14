@@ -15,7 +15,7 @@ const NavBar = () => {
                         <li className="nav-item"><NavLink className="nav-link" to='/nosotros'>Nosotros</NavLink></li>
                     </ul>
                 </div>
-                <NavLink to="/cart"><CartWidget /></NavLink>
+                <CartWidget />
             </div>
         </nav>
     )
