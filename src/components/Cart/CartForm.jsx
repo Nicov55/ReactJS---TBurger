@@ -10,7 +10,7 @@ const CartForm = () => {
                     <h5 className=" mb-3">Envio/Retiro</h5>
                     <div className="mb-4 pb-2">
                         <select className="select valor">
-                        1   <option value="1">Quiero que me lo envien</option>
+                            <option value="1">Quiero que me lo envien</option>
                             <option value="2">Lo retiro yo mismo</option>
                         </select>
                     </div>
