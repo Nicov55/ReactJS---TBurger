@@ -4,7 +4,7 @@ import NavBar from './components/NavBar';
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
-import Cart from './components/Cart';
+import Cart from './components/Cart/Cart';
 import Nosotros from './components/Nosotros';
 import ItemDetailContainer from './components/Producto/Detalles/ItemDetailContainer';
 
@@ -24,6 +24,7 @@ function App() {
           <Route path='/nosotros' element={<Nosotros />}> </Route>
           <Route path='/cart' element={<Cart />}> </Route>
         </Routes>
+        <hr />
         <Footer />
         <hr />
     </BrowserRouter>

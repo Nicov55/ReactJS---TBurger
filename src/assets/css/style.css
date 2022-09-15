@@ -1,3 +1,5 @@
+/* GENERAL */
+
 * {
     margin:0;
     padding: 0;
@@ -7,6 +9,8 @@
     background: linear-gradient(0deg, rgba(185,185,185,1) 20%, rgba(251,251,251,1) 91%)
 }
 
+/* CART */
+
 .logocart {
     width: 29px;
     height: 29px;
@@ -15,6 +19,18 @@
 .botoncart {
     align-items: center;
 }
+
+.vaciarcart{
+    align-items: right;
+    text-align: right;
+    justify-content: right;
+    float: right;
+}
+
+.cartmain {
+    background-color: white;
+}
+/* ITEM COUNTER */
 
 .counter {
     width: fit-content;
@@ -27,12 +43,17 @@
     padding-right: 10px;
 }
 
+/* HEADER */
+
 .fondoheader {
     /* background-image: url("../images/bannermodelo.jpg");
     background-position: 20%;
     background-size: cover; */
     text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 }
+
+
+/* ITEM DETAIL CARD  */
 
 .detailimg {
     width: 400px;
@@ -46,4 +67,14 @@ margin-left: auto;
 margin-right: auto;
 justify-content: center;
 max-width: 700px;
+}
+
+/* NOSOTROS */
+
+.ubi {
+    padding: 20px;
+}
+
+.nosotros {
+    padding: 20px;
 }
