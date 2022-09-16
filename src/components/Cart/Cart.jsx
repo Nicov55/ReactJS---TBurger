@@ -17,7 +17,7 @@ const Cart = () => {
                     </div>
                         {/* <!-- Agregado de Productos --> */}
                     <hr className="my-4" />
-                    <Link className="btn btn-secondary btn-sm" to='/index' role="button">Volver a la Tienda</Link>
+                    <Link className="btn btn-secondary btn-sm" to='/' role="button">Volver a la Tienda</Link>
                     <button type="button" className="btn btn-warning btn-sm vaciarcart">Vaciar Pedido</button>
                   </div>
                 </div>
