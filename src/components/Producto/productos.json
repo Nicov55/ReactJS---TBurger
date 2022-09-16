@@ -5,7 +5,8 @@
     "precio":  900,
     "imagen": "https://i.ibb.co/k4cnwg5/cheeseburger.jpg",
     "descripcion": "Hamburguesa en pan de queso, con dos medallones de 120 gr y 4 fetas de queso cheddar con papas fritas",
-    "adicionales": []  
+    "adicionales": [],
+    "stock": 10  
 },
 
 {
@@ -14,7 +15,8 @@
     "precio":  1000,
     "imagen": "https://i.ibb.co/wSgRbLD/cheesebaconburger.jpg",
     "descripcion": "Hamburguesa en pan de papa, con dos medallones de 120 gr, 4 fetas de queso cheddar, doble panceta ahumada y salsa BK con papas fritas",
-    "adicionales": []     
+    "adicionales": [],
+    "stock": 10     
 },
 
 {
@@ -23,7 +25,8 @@
     "precio":  1100,
     "imagen": "https://i.ibb.co/BLdw9kP/crispyburger.jpg",
     "descripcion": "Hamburguesa en pan de papa, con dos medallones de 120gr, 4 fetas de queso cheddar, doble panceta ahumada, cebolla crispy y salsa thousand island con papas fritas",
-    "adicionales": []    
+    "adicionales": [],
+    "stock": 9    
 },
 
 {
@@ -32,7 +35,8 @@
     "precio":  1100,
     "imagen": "https://i.ibb.co/VD009w7/americanburger.jpg",
     "descripcion": "Hamburguesa en pan de papa, con dos medallones de 120gr, 4 fetas de queso cheddar , lechuga, tomate, pepino, cebolla y salsa BM con papas fritas",
-    "adicionales": []    
+    "adicionales": [],
+    "stock": 9    
 },
 
 {
@@ -41,7 +45,8 @@
     "precio":  1100,
     "imagen": "https://i.ibb.co/yspdxS9/onionburger.jpg",
     "descripcion": "Hamburguesa en pan de papa, con doble carne de 120gr smasheada con cebolla a la plancha y 4 fetas de queso cheddar con papas fritas",
-    "adicionales": []    
+    "adicionales": [],
+    "stock": 8    
 },
 
 {
@@ -50,7 +55,8 @@
     "precio":  1000,
     "imagen": "https://i.ibb.co/d56nj5y/veggieburger.jpg",
     "descripcion": "Hamburguesa en pan de papa, medallon de lentejas, rucula, parmesano, tomate y salsa de albahaca con papas fritas",
-    "adicionales": []    
+    "adicionales": [], 
+    "stock": 8   
 }
 
 

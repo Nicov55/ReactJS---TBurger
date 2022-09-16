@@ -29,7 +29,7 @@ const ItemDetail = ({item}) => {
                 {
                   goToCart 
                   ? <Link className = "btn btn-outline-success" role="button" to="/cart">Finalizar Pedido</Link>
-                  : <ItemCount initial={1} stock={8} onAdd= {onAdd} />
+                  : <ItemCount initial={1} stock={item.stock} onAdd= {onAdd} />
                 }
             </div>
           </div>
