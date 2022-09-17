@@ -1,6 +1,6 @@
 import React from "react";
 import '../../assets/css/style.css'
-import Productos from './productos.json'
+import Products from './products.json'
 import ItemList from "./ItemList";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -8,14 +8,14 @@ import { useEffect } from "react";
 
 const ItemListContainer = (props) => {
 
-    const productos = Productos.map(productos => productos)
+    const products = Products.map(products => products)
 
     const [data,setData] = useState ([])
 
     useEffect(() => {
         const getData = new Promise (resolve => {
             setTimeout(() => {
-                resolve(productos)
+                resolve(products)
             }, 2000)
         });
         getData.then(res => setData(res))

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../assets/css/style.css';
+import { useCartContext } from '../../../context/CartContext';
 import ItemCount from '../../Botones/ItemCount';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -7,24 +8,27 @@ import { Link } from 'react-router-dom';
 
 const ItemDetail = ({item}) => {
 
-  const [goToCart,setGoToCart] = useState (false)
+  const [goToCart,setGoToCart] = useState (false);
 
-  const onAdd = (cantidad) => {
+  const {addProduct} = useCartContext ();
+
+  const onAdd = (quantity) => {
     setGoToCart(true);
+    addProduct(item,quantity);
   };
 
   return (
     <div className="card mb-3 detailcard">
       <div className="row g-0">
         <div className="col-md-6">
-          <img src={item.imagen}className="img-fluid rounded-start detailimg" alt="..." />
+          <img src={item.image}className="img-fluid rounded-start detailimg" alt="..." />
         </div>
               <div className="col-md-6">
                 <div className="card-body">
                   <br />
-                  <h4 className="card-title card-header">{item.nombre}</h4>
-                  <p className="card-text card-body">{item.descripcion}</p>
-                  <p className="card-text card-footer fw-bold text-end">${item.precio}</p>
+                  <h4 className="card-title card-header">{item.name}</h4>
+                  <p className="card-text card-body">{item.description}</p>
+                  <p className="card-text card-footer fw-bold text-end">${item.price}</p>
                 <div className="text-end">
                 {
                   goToCart 

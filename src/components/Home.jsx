@@ -1,6 +1,5 @@
-import React from 'react'
-import ItemDetailContainer from './Producto/Detalles/ItemDetailContainer'
-import ItemListContainer from './Producto/ItemListContainer'
+import React from 'react';
+import ItemListContainer from './Producto/ItemListContainer';
 
 const Home = () => {
   return (

@@ -1,0 +1,64 @@
+[
+{
+    "id": 0,
+    "name": "CHEESE BURGER",
+    "price":  900,
+    "image": "https://i.ibb.co/k4cnwg5/cheeseburger.jpg",
+    "description": "Hamburguesa en pan de queso, con dos medallones de 120 gr y 4 fetas de queso cheddar con papas fritas",
+    "extras": [],
+    "stock": 10  
+},
+
+{
+    "id": 1,
+    "name": "BACON BURGER",
+    "price":  1000,
+    "image": "https://i.ibb.co/wSgRbLD/cheesebaconburger.jpg",
+    "description": "Hamburguesa en pan de papa, con dos medallones de 120 gr, 4 fetas de queso cheddar, doble panceta ahumada y salsa BK con papas fritas",
+    "extras": [],
+    "stock": 10     
+},
+
+{
+    "id": 2,
+    "name": "CRISPY BURGER",
+    "price":  1100,
+    "image": "https://i.ibb.co/BLdw9kP/crispyburger.jpg",
+    "description": "Hamburguesa en pan de papa, con dos medallones de 120gr, 4 fetas de queso cheddar, doble panceta ahumada, cebolla crispy y salsa thousand island con papas fritas",
+    "extras": [],
+    "stock": 9    
+},
+
+{
+    "id": 3,
+    "name": "AMERICAN BURGER",
+    "price":  1100,
+    "image": "https://i.ibb.co/VD009w7/americanburger.jpg",
+    "description": "Hamburguesa en pan de papa, con dos medallones de 120gr, 4 fetas de queso cheddar , lechuga, tomate, pepino, cebolla y salsa BM con papas fritas",
+    "extras": [],
+    "stock": 9    
+},
+
+{
+    "id": 4,
+    "name": "ONION BURGER",
+    "price":  1100,
+    "image": "https://i.ibb.co/yspdxS9/onionburger.jpg",
+    "description": "Hamburguesa en pan de papa, con doble carne de 120gr smasheada con cebolla a la plancha y 4 fetas de queso cheddar con papas fritas",
+    "extras": [],
+    "stock": 8    
+},
+
+{
+    "id": 5,
+    "name": "VEGGIE BURGER",
+    "price":  1000,
+    "image": "https://i.ibb.co/d56nj5y/veggieburger.jpg",
+    "description": "Hamburguesa en pan de papa, medallon de lentejas, rucula, parmesano, tomate y salsa de albahaca con papas fritas",
+    "extras": [], 
+    "stock": 8   
+}
+
+
+]
+
