@@ -1,6 +1,7 @@
 import React from 'react';
 import CartForm from './CartForm';
 import { Link } from 'react-router-dom';
+import CartItem from './CartItem';
 
 const Cart = () => {
   return (
@@ -12,10 +13,11 @@ const Cart = () => {
                   <div className="p-5">
                     <div className="d-flex justify-content-between align-items-center mb-5">
                       <h1 className="fw-bold mb-0 text-black">Pedido</h1>
-                        {/* <!-- Cantidad de Items --> */}
+                      {/* <!-- Cantidad de Items --> */}
                       <h6 className="mb-0 text-muted" id="cantidadpedidocarrito">CANTIDAD DE PRODUCTOS</h6>  
                     </div>
-                        {/* <!-- Agregado de Productos --> */}
+                    {/* <!-- Agregado de Productos --> */}
+                    <CartItem />
                     <hr className="my-4" />
                     <Link className="btn btn-secondary btn-sm" to='/' role="button">Volver a la Tienda</Link>
                     <button type="button" className="btn btn-warning btn-sm vaciarcart">Vaciar Pedido</button>
