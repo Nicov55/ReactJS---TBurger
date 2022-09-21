@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
       });
 
 
-  },[])
+  },[detailId,products])
 
   return (
     <div>

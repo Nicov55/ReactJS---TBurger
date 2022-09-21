@@ -22,7 +22,7 @@ const ItemListContainer = (props) => {
         .catch((error) => {
             console.log(error = "Ocurrio un error, intente nuevamente");
         });
-    },[])
+    },[products])
     
     return (
         <div>

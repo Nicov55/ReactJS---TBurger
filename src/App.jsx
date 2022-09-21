@@ -7,7 +7,7 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import Cart from './components/Cart/Cart';
 import Nosotros from './components/Nosotros';
-import ItemDetailContainer from './components/Producto/Detalles/ItemDetailContainer';
+import ItemDetailContainer from './components/Product/Details/ItemDetailContainer';
 import CartProvider from './context/CartContext';
 
 
