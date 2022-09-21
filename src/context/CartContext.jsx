@@ -40,12 +40,15 @@ console.log(cart);
   return (
     <div>
         <CartContext.Provider value= {{
+            // Funciones
             clearCart,
             inCart,
             removeProduct,
             addProduct,
             totalPrice,
-            totalProduct
+            totalProduct,
+            // Estados
+            cart
         }}>
             {children}
         </CartContext.Provider>
