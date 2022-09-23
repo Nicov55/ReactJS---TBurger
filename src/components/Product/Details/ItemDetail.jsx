@@ -32,7 +32,12 @@ const ItemDetail = ({item}) => {
                 <div className="text-end">
                 {
                   goToCart 
-                  ? <Link className = "btn btn-outline-success" role="button" to="/cart">Finalizar Pedido</Link>
+                  ? <div>
+                      <Link className = "btn btn-warning btn-sm fw-semibold" role="button" to="/cart">Continuar Pidiendo</Link>
+                      <br />
+                      <br />
+                      <Link className = "btn btn-dark btn-sm fw-semibold" role="button" to="/cart">Finalizar Pedido</Link>
+                    </div>
                   : <ItemCount initial={1} stock={item.stock} onAdd= {onAdd} />
                 }
             </div>

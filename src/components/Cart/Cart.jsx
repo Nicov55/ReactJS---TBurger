@@ -22,10 +22,10 @@ const Cart = () => {
                       <h6 className="mb-0 text-muted" id="cantidadpedidocarrito">CANTIDAD DE PRODUCTOS</h6>  
                     </div>
                     {/* <!-- Agregado de Productos --> */}
-                    <p>No hay elementos en el carrito</p>
+                    <p>No hay productos en el carrito</p>
                     <hr className="my-4" />
-                     <Link className="btn btn-secondary btn-sm" to='/' role="button">Volver a la Tienda</Link>
-                     <button type="button" className="btn btn-warning btn-sm vaciarcart">Vaciar Pedido</button>
+                     <Link className="btn btn-secondary" to='/' role="button">Volver a la Tienda</Link>
+                     <button type="button" className="btn btn-warning vaciarcart">Vaciar Pedido</button>
                    </div>
                 </div>
                 <div className="col-lg-4 bg-grey">
@@ -54,8 +54,8 @@ const Cart = () => {
                     {cart.map(product => <CartItem key={product.id} product={product}/>)}
                     <hr />
                     <p className='text-end fs-5 fw-semibold'>Precio Total: ${totalPrice()}</p>
-                    <Link className="btn btn-secondary btn-sm" to='/' role="button">Volver a la Tienda</Link>
-                    <button type="button" className="btn btn-warning btn-sm vaciarcart">Vaciar Pedido</button>
+                    <Link className="btn btn-secondary" to='/' role="button">Volver a la Tienda</Link>
+                    <button type="button" className="btn btn-warning vaciarcart">Vaciar Pedido</button>
                   </div>
                 </div>
                 <div className="col-lg-4 bg-grey">
