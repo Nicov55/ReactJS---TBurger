@@ -29,10 +29,10 @@ const inCart = (id) => cart.find(product => product.id === id) ? true : false;
 const removeProduct = (id) => setCart(cart.filter(product => product.id !== id));
 
 const totalPrice = () => {
-    return cart.reduce((prev,act) => prev + prod.quantity * prod.price, 0)
+    return cart.reduce((prev,act) => prev + act.quantity * act.price, 0)
 };
 
-const totalProduct = () => cart.reduce((acu,currentProduct) => acu + currentProduct.quantity); 
+const totalProducts = () => cart.reduce((acu,currentProduct) => acu + currentProduct.quantity, 0); 
 
 console.log(cart);
 
@@ -46,7 +46,7 @@ console.log(cart);
             removeProduct,
             addProduct,
             totalPrice,
-            totalProduct,
+            totalProducts,
             // Estados
             cart
         }}>

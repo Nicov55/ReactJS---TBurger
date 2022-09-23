@@ -1,6 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { useCartContext } from '../../context/CartContext';
 
 const CartForm = () => {
+
+    const {totalPrice} = useCartContext ();
+
     return (
         <div className='cartform'>
             <div className="p-5">
@@ -15,19 +19,21 @@ const CartForm = () => {
                         </select>
                     </div>
 
-                    <label className="form-label">Domicilio</label>
+                    <p>Domicilio</p>
                     <div className="mb-5">
                         <div className="form-outline">
                             <input type="text" id="form3Examplea2" className="form-control form-control-sm valor" />
                         </div>
+                        <br />
 
-                        <label className="form-label">Entrecalles</label>
+                        <p>Entrecalles</p>
                         <div className="mb-5">
                             <div className="form-outline">
                                 <input type="text" id="form3Examplea2" className="form-control form-control-sm valor" />
                             </div>
+                            <br />
 
-                            <label className="form-label">Telefono</label>
+                            <p>Telefono</p>
                             <div className="mb-5">
                                 <div className="form-outline">
                                     <input type="text" id="form3Examplea2" className="form-control form-control-sm valor" />
@@ -42,19 +48,17 @@ const CartForm = () => {
                                     </select>
                                     <br />
                                     <br />    
-                                    <label className="form-label">¿Con cuanto abona?</label>
+                                    <p className="form-p">¿Con cuanto abona?</p>
                                 </div>
-                                <div className="mb-5">
                                     <div className="form-outline">
                                         <input type="text" id="form3Examplea2" className="form-control form-control-sm valor" />
                                     </div>
                                     <hr className="my-4" />
                                     <div className="d-flex justify-content-between mb-5">
                                         <h5 className="text-uppercase">Precio Final</h5>
-                                        <h5>$ 0</h5>
+                                        <h5>${totalPrice()}</h5>
                                     </div>
                                     <button type="button" className="btn btn-dark btn-block btn-lg botonconfirmado" id="botonconfirmado">Enviar Pedido</button>
-                                </div>
                             </div>
                         </div>
                     </div>
