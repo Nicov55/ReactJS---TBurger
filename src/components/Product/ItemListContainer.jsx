@@ -4,25 +4,33 @@ import Products from './products.json'
 import ItemList from "./ItemList";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 
 const ItemListContainer = (props) => {
 
-    const products = Products.map(products => products)
+    const products = Products.map(products => products);
 
-    const [data,setData] = useState ([])
+    const [data,setData] = useState ([]);
+    
+    const {categoryId} = useParams();
 
     useEffect(() => {
         const getData = new Promise (resolve => {
             setTimeout(() => {
                 resolve(products)
-            }, 2000)
+            }, 2000);
         });
-        getData.then(res => setData(res))
-        .catch((error) => {
-            console.log(error = "Ocurrio un error, intente nuevamente");
-        });
-    },[products])
+        if(categoryId){
+            getData.then(res => setData(res.filter(product=>product.category === categoryId)));
+        }
+        else {
+            getData.then(res => setData(res))
+            .catch((error) => {
+            console.log(error = "Ocurrio un error, intente nuevamente")})            
+        }
+
+    },[categoryId,products]);
     
     return (
         <div>
