@@ -33,7 +33,7 @@ const ItemDetail = ({item}) => {
                 {
                   goToCart 
                   ? <div>
-                      <Link className = "btn btn-warning btn-sm fw-semibold" role="button" to="/cart">Continuar Pidiendo</Link>
+                      <Link className = "btn btn-warning btn-sm fw-semibold" role="button" to="/">Continuar Pidiendo</Link>
                       <br />
                       <br />
                       <Link className = "btn btn-dark btn-sm fw-semibold" role="button" to="/cart">Finalizar Pedido</Link>

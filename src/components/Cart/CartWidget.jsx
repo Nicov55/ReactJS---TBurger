@@ -14,7 +14,7 @@ const CartWidget = () => {
                 <Link className="btn btn-outline-dark botoncart" to="/cart" role="button">
                 <img className="logocart" src={images.logocart} alt="logocart" />
                     <i className="bi-cart-fill me-1"></i>
-                    <span className="badge bg-dark text-white ms-2 rounded-pill">{totalProducts() || ''}</span>
+                    <span className="badge bg-dark text-white ms-2 rounded-pill">{totalProducts() || '0'}</span>
                 </Link>
             </form>
         </div>

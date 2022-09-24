@@ -15,7 +15,7 @@ const Item = ({item}) => {
         {/* NOMBRE DEL PRODUCTO */}
                 <h5 className="nombreburger fw-bolder" >{item.name}</h5>
         {/* PRECIO */}
-                <p className="precio" id="precio-0">$ {item.price}</p>
+                <p className="precio fw-semibold" id="precio-0">$ {item.price}</p>
             </div>
           </div>
         {/* ACCIONES */}
