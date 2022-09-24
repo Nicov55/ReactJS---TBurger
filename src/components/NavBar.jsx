@@ -21,9 +21,9 @@ const NavBar = () => {
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav fw-semibold">
                 <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <ul className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Tienda
-                    </a>
+                    </ul>
                     <ul className="dropdown-menu">
                     {categories.map(cat => <li key={cat.id} className="dropdown-item categories"><NavLink className="nav-link" to={cat.link} aria-current="page" >{cat.name}</NavLink></li> )}
                     </ul>
