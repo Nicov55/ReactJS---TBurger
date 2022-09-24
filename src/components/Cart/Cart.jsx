@@ -6,7 +6,7 @@ import { useCartContext } from '../../context/CartContext';
 
 const Cart = () => {
 
-  const {cart,totalPrice} = useCartContext ();
+  const {cart,totalPrice,clearCart} = useCartContext ();
 
   if (cart.length === 0) {
     return (
@@ -25,7 +25,7 @@ const Cart = () => {
                     <p>No hay productos en el carrito</p>
                     <hr className="my-4" />
                      <Link className="btn btn-secondary" to='/' role="button">Volver a la Tienda</Link>
-                     <button type="button" className="btn btn-warning vaciarcart">Vaciar Pedido</button>
+                     <button onClick={clearCart} type="button" className="btn btn-warning vaciarcart">Vaciar Pedido</button>
                    </div>
                 </div>
                 <div className="col-lg-4 bg-grey">
@@ -55,7 +55,7 @@ const Cart = () => {
                     <hr />
                     <p className='text-end fs-5 fw-semibold'>Precio Total: ${totalPrice()}</p>
                     <Link className="btn btn-secondary" to='/' role="button">Volver a la Tienda</Link>
-                    <button type="button" className="btn btn-warning vaciarcart">Vaciar Pedido</button>
+                    <button onClick={clearCart} type="button" className="btn btn-warning vaciarcart">Vaciar Pedido</button>
                   </div>
                 </div>
                 <div className="col-lg-4 bg-grey">
