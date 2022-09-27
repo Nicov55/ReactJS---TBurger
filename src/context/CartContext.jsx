@@ -2,21 +2,28 @@ import React from 'react';
 import { useContext } from 'react';
 import { useState } from 'react';
 
+
+// Creación de contexto
+
 const CartContext = React.createContext([]);
+
+// Variable para utilizar CartContext en componentes
 
 export const useCartContext = () => useContext(CartContext)
 
-const CartProvider = ({children}) => {
+// Creación de Provider que contendrá toda la lógica
 
-// LOGICA DEL CARRITO
+const CartProvider = (props) => {
 
-const addProduct = (item,quantity) => {
-if (inCart(item.id)) {
-    setCart(cart.map(product => {
-        return product.id === item.id ? {...product, quantity: product.quantity + quantity} : product
+// Logica del carrito
+
+const addProduct = (product,quantity) => {
+if (inCart(product.id)) {
+    setCart(cart.map(productInCart => {
+        return productInCart.id === product.id ? {...productInCart, quantity: productInCart.quantity + quantity} : productInCart
     })); 
 } else {
-    setCart ([...cart,{...item,quantity}])
+    setCart ([...cart,{...product,quantity}])
 }
 };
 
@@ -29,10 +36,20 @@ const inCart = (id) => cart.find(product => product.id === id) ? true : false;
 const removeProduct = (id) => setCart(cart.filter(product => product.id !== id));
 
 const totalPrice = () => {
-    return cart.reduce((prev,act) => prev + act.quantity * act.price, 0)
-};
+    const copy = [...cart];
+    let count = 0;
+    copy.forEach (product => 
+        count += product.quantity*product.price);
+    return count
+}
 
-const totalProducts = () => cart.reduce((acu,currentProduct) => acu + currentProduct.quantity, 0); 
+const totalProducts = () => {
+    const copy = [...cart];
+    let count = 0;
+    copy.forEach (product => 
+        count += product.quantity);
+    return count
+}
 
 console.log(cart);
 
@@ -50,7 +67,7 @@ console.log(cart);
             // Estados
             cart
         }}>
-            {children}
+            {props.children}
         </CartContext.Provider>
 
     </div>

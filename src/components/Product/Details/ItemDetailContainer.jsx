@@ -6,6 +6,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from 'react-router-dom';
 
+// Busca y envía información de un producto {item} => ItemDetail
+
 const ItemDetailContainer = () => {
 
   const products = Products.map(products => products)

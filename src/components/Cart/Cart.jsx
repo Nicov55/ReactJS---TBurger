@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
 import { useCartContext } from '../../context/CartContext';
 
+// Renderizado principal de carrito según contenido
+
 const Cart = () => {
 
   const {cart,totalPrice,clearCart} = useCartContext ();

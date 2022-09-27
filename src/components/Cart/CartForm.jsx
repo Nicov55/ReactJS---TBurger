@@ -1,6 +1,8 @@
 import React from 'react';
 import { useCartContext } from '../../context/CartContext';
 
+// Formulario de finalizacion de pedido => Cart
+
 const CartForm = () => {
 
     const {totalPrice} = useCartContext ();

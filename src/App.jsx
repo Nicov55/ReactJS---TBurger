@@ -16,7 +16,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <CartProvider value='Nicolas'>
+      <CartProvider>
         <NavBar />
         <hr />
         <Header />

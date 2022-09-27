@@ -2,6 +2,8 @@ import React from 'react';
 import '../../assets/css/style.css'
 import Item from './Item';
 
+// Mapeo de productos (data) recibido => Item
+
 const ItemList = ({data=[]}) => {
 
 

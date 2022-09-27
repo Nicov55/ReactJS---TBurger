@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
+// Contador de Productos en ItemDetail
+
 const ItemCount = ({initial, stock, onAdd}) => {
 
 const [count,setCount] = useState(parseInt(initial));

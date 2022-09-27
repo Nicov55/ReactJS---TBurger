@@ -2,6 +2,7 @@ import React from 'react';
 import '../../assets/css/style.css'
 import { Link } from 'react-router-dom';
 
+// Renderizado en el DOM de productos recibidos por props de ItemList 
 
 const Item = ({item}) => {
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useCartContext } from '../../context/CartContext';
 
+// Renderizado individual de productos => Cart
+
 const CartItem = ({product}) => {
 
   const {removeProduct} = useCartContext();

@@ -4,6 +4,8 @@ import images from "../../assets/images/images.js";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 
+// Widget principal de carrito => Cart
+
 const CartWidget = () => {
 
     const {totalProducts} = useCartContext ();

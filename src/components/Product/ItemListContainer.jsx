@@ -7,7 +7,10 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 
-const ItemListContainer = (props) => {
+// Llamado a Productos y guardado de estado (data) => ItemList
+
+
+const ItemListContainer = () => {
 
     const products = Products.map(products => products);
 

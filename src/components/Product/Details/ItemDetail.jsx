@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
+// Renderiza información del producto con lo recibido de ItemDetailContainer
+
 const ItemDetail = ({item}) => {
 
   const [goToCart,setGoToCart] = useState (false);
