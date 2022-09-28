@@ -7,6 +7,8 @@
 
 #root {
     background: linear-gradient(0deg, rgba(185,185,185,1) 20%, rgba(251,251,251,1) 91%)
+    /* background-image: url(../images/bgburger.jpg);
+    background-size: contain; */
 }
 
 /* CART */
