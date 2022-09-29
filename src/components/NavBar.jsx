@@ -3,8 +3,11 @@ import { NavLink } from "react-router-dom";
 import '../assets/css/style.css';
 import images from "../assets/images/images";
 import CartWidget from "./Cart/CartWidget";
+import { useCartContext } from "../context/CartContext";
 
 const NavBar = () => {
+
+    const {cart} = useCartContext();
 
     const categories = [
         {id:0, name:"Menu Completo", link:"/"},
@@ -31,7 +34,11 @@ const NavBar = () => {
                 <li className="nav-item"><NavLink className="nav-link" to="/nosotros" aria-current="page" >Nosotros</NavLink></li>
                 </ul>
             </div>
-                <CartWidget />
+                {
+                cart.length===0
+                    ? ''
+                    : <CartWidget />
+                }
             </div>
         </nav>
     )

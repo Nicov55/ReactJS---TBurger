@@ -36,7 +36,7 @@
         "id": 3,
         "name": "AMERICAN BURGER",
         "price":  1300,
-        "image": "https://i.ibb.co/VD009w7/americanburger.jpg",
+        "image": "https://firebasestorage.googleapis.com/v0/b/tburger---reactjs.appspot.com/o/americanburger.jpg?alt=media&token=30703cc2-176b-4f2f-bc9f-782dcf28f819",
         "description": "Hamburguesa en pan de papa, con dos medallones de 120gr, 4 fetas de queso cheddar , lechuga, tomate, pepino, cebolla y salsa BM con papas fritas",
         "extras": [],
         "stock": 9,
