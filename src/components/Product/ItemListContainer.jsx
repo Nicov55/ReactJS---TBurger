@@ -1,6 +1,6 @@
 import React from "react";
 import '../../assets/css/style.css'
-import {getFirestore, collection, getDocs, orderBy, query, where} from 'firebase/firestore';
+import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore';
 import ItemList from "./ItemList";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -37,7 +37,7 @@ const ItemListContainer = () => {
             .then(res => setData(res.docs.map(product=> ({id:product.id,...product.data()})))); 
         }
 
-        },[]);
+        },[categoryId]);
     
     return (
         <div>
