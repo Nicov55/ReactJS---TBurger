@@ -18,7 +18,7 @@ const NavBar = () => {
     ];
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+        <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top ">
             <div className="container px-4 px-lg-5">
                 <NavLink className="navbar-brand" to='/'><img src={images.logoburger} alt="BurgerLogo" width= "48" height= "48" /> T-BURGER</NavLink>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">

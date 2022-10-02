@@ -7,7 +7,7 @@
 
 #root {
     background: linear-gradient(0deg, rgba(185,185,185,1) 20%, rgba(251,251,251,1) 91%)
-    /* background-image: url(../images/bgburger.jpg);
+    /* background-image: url(../images/pexels-photo-1939485.jpeg);
     background-size: contain; */
 }
 
@@ -45,14 +45,27 @@
     padding-right: 10px;
 }
 
+
+
+/* NAVBAR */
+
+.categories {
+    font-size: 14px;
+}
+
+.navbar .nav-link .navbar-brand {
+color: white;
+text-decoration: solid;
+}
+
 /* HEADER */
 
-.fondoheader {
-    /* background-image: url("../images/bannermodelo.jpg");
+/* .fondoheader {
+    background-image: url("../images/bannermodelo.jpg");
     background-position: 20%;
-    background-size: cover; */
+    background-size: cover;
     text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
-}
+} */
 
 
 /* ITEM DETAIL CARD  */
@@ -79,10 +92,4 @@ max-width: 700px;
 
 .nosotros {
     padding: 20px;
-}
-
-/* NAVBAR */
-
-.categories {
-    font-size: 14px;
 }
