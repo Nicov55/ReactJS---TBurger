@@ -32,6 +32,14 @@
 .cartmain {
     background-color: white;
 }
+
+.selector {
+    font-size: 16px;
+}
+
+.valor {
+    font-size: 16px;
+}
 /* ITEM COUNTER */
 
 .counter {

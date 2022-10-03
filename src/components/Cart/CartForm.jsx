@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { getFirestore, serverTimestamp, collection, addDoc } from 'firebase/firestore';
 import { useCartContext } from '../../context/CartContext';
+import Select from 'react-select';
 
 
 
@@ -23,7 +24,7 @@ const CartForm = () => {
             buyer: {nombre, envio, domicilio, entrecalles, telefono, formapago, montopago},
             cart: cart,   
             date: serverTimestamp(),
-            total: totalPrice 
+            total: totalPrice() 
         }
         const db = getFirestore ();
         const refOrder = collection(db,'orders');
@@ -31,24 +32,24 @@ const CartForm = () => {
         .then((res) => console.log(res))
     };
     const handleNombre = (e) => setNombre(e.target.value);
-    const handleEnvio = (e) => setEnvio(e.target.value);
+    const handleEnvio = (e) => setEnvio(e.value);
     const handleDomicilio = (e) => setDomicilio(e.target.value);
     const handleEntrecalles = (e) => setEntrecalles(e.target.value);
     const handleTelefono = (e) => setTelefono(e.target.value);
-    const handleFormapago = (e) => setFormapago(e.target.value);
+    const handleFormapago = (e) => setFormapago(e.value);
     const handleMontopago = (e) => setMontopago(e.target.value);
 
     const {totalPrice,cart} = useCartContext ();
 
-    // const selectorDelivery = [
-    //     {label : 'Quiero que me lo envien', value: 'Quiero que me lo envien'},
-    //     {label : 'Lo retiro yo mismo', value: 'Lo retiro yo mismo'},
-    // ];
+    const selectorDelivery = [
+        {label : 'Quiero que me lo envien', value:"Quiero que me lo envien"},
+        {label : 'Lo retiro yo mismo', value:"Lo retiro yo mismo"},
+    ];
 
-    // const selectorPay = [
-    //     {label : 'Efectivo', value: 'Efectivo'},
-    //     {label : 'Mercado Pago', value: 'Mercado Pago'},
-    // ]
+    const selectorPay = [
+        {label : 'Efectivo', value:"Efectivo"},
+        {label : 'Mercado Pago', value:"Mercado Pago"},
+    ]
 
 
     return (
@@ -58,7 +59,7 @@ const CartForm = () => {
                 <hr className="my-4" />
                 <form action='' className="form-group" onSubmit={handleSubmit}>
                     <div className="form-outline">
-                        <h6>Complete los datos y recibirá su N° de Orden:</h6>
+                        <h5>Complete los datos y recibirá su N° de Orden:</h5>
                             <input 
                             required 
                             type="text" 
@@ -69,12 +70,12 @@ const CartForm = () => {
                         </div>
                         <br />
 
-                    <h6 className=" mb-3">Envio/Retiro</h6>
-                    <div className="mb-4 pb-2">
-                        <select required onChange={handleEnvio} className="select valor">
-                            <option value="1">Quiero que me lo envien</option>
-                            <option value="2">Lo retiro yo mismo</option>
-                        </select>
+                    <div className="mb-3">
+                        <Select required 
+                        onChange={handleEnvio} 
+                        placeholder='Envio/Retiro' 
+                        className="selector" 
+                        options={selectorDelivery} />
                     </div>
                     <div className="mb-5">
                         <div className="form-outline">
@@ -109,14 +110,13 @@ const CartForm = () => {
                                     className="form-control form-control-sm valor" />
                                 </div>
                                 <br />
-                                <h6 className=" mb-3">Forma de Pago</h6>
-
-                                <div className="mb-5">
-                                    <select required onChange={handleFormapago} className="select valor">
-                                        <option value="1">Efectivo</option>
-                                        <option value="2">Mercado Pago</option>
-                                    </select>
-                                    <br />
+                                <div className="mb-2">
+                                <Select 
+                                required 
+                                onChange={handleFormapago} 
+                                placeholder='Forma de pago' 
+                                className="selector" 
+                                options={selectorPay} />
                                     <br />
                                     <div className="form-outline">
                                         <input 
