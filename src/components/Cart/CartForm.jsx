@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { getFirestore, serverTimestamp, collection, addDoc } from 'firebase/firestore';
+import { getFirestore, serverTimestamp, collection, addDoc, doc, getDoc, updateDoc } from 'firebase/firestore';
 import { useCartContext } from '../../context/CartContext';
 import Select from 'react-select';
-
-
+import swal from 'sweetalert2';
+import '../../assets/css/style.css';
 
 
 // Formulario de finalizacion de pedido => Cart
 
 const CartForm = () => {
+ 
+    const {totalPrice,cart,clearCart} = useCartContext ();
 
     const [nombre,setNombre] = useState('');
     const [envio,setEnvio] = useState('');
@@ -28,9 +30,34 @@ const CartForm = () => {
         }
         const db = getFirestore ();
         const refOrder = collection(db,'orders');
-        addDoc(refOrder, order)
-        .then((res) => console.log(res))
+        addDoc(refOrder, order).then((res) =>{
+            new swal({
+                title: 'Pedido Realizado',
+                text: `
+                Tu ID de Orden es: ${res.id}`,
+                footer: `Nombre: ${nombre} -
+                Direccion: ${domicilio} -
+                Total: $ ${totalPrice()}`,
+                icon:'success',
+                confirmButtonText:
+                'OK'
+            })
+            .then(
+                cart.forEach(product=> {
+                    const purchasedQuantity = product.quantity
+                    const updateCollection = doc (db, "products", `${product.id}`)
+                    getDoc (updateCollection)
+                    .then (res => {
+                        const updatedStock = res.data().stock - purchasedQuantity
+                        updateDoc(updateCollection,{"stock" : updatedStock})
+                    })
+                })
+            )
+        })
+        clearCart();
     };
+
+
     const handleNombre = (e) => setNombre(e.target.value);
     const handleEnvio = (e) => setEnvio(e.value);
     const handleDomicilio = (e) => setDomicilio(e.target.value);
@@ -38,8 +65,6 @@ const CartForm = () => {
     const handleTelefono = (e) => setTelefono(e.target.value);
     const handleFormapago = (e) => setFormapago(e.value);
     const handleMontopago = (e) => setMontopago(e.target.value);
-
-    const {totalPrice,cart} = useCartContext ();
 
     const selectorDelivery = [
         {label : 'Quiero que me lo envien', value:"Quiero que me lo envien"},
@@ -50,8 +75,7 @@ const CartForm = () => {
         {label : 'Efectivo', value:"Efectivo"},
         {label : 'Mercado Pago', value:"Mercado Pago"},
     ]
-
-
+    
     return (
         <div className='cartform'>
             <div className="p-5">
@@ -133,7 +157,7 @@ const CartForm = () => {
                                         <h5 className="text-uppercase">Precio Final</h5>
                                         <h5>${totalPrice()}</h5>
                                     </div>
-                                    <button className="btn btn-dark btn-block btn-lg botonconfirmado" id="botonconfirmado">Enviar Pedido</button>
+                                    <button className="btn btn-dark btn-block btn-lg" id="confirmedButton">Enviar Pedido</button>
                             </div>
                         </div>
                     </div>

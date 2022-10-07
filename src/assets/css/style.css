@@ -11,6 +11,8 @@
     background-size: contain; */
 }
 
+
+
 /* CART */
 
 .logocart {
@@ -39,6 +41,10 @@
 
 .valor {
     font-size: 16px;
+}
+
+.confirmButton{
+    text-decoration: none;
 }
 /* ITEM COUNTER */
 
