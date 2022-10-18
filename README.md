@@ -4,7 +4,7 @@ Este es un repositorio de ReactJS relativo a un e-commerce de hamburguesas.
 
 Se utilizaran todas las herramientas trabajadas en el curso y se encuentra abierto como modelo de prueba a incorporar más herramientas que permitan una mejor versión del sitio a lo largo del tiempo.
 
-Dependencias extras
+Dependencias extras:
 
 Firestore Database: Utilizado mediante la plataforma de Google "FireBase", funciona como BackEnd en este proyecto, tanto para recibir los productos, como para enviar y alojar las ordenes de compra.
 
